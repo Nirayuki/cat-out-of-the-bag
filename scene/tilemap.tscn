@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://c40xvcpnbvn3m"]
+
+[ext_resource type="Texture2D" uid="uid://chp3dq7cxhc6i" path="res://assets/door.png" id="1_00dfk"]
+[ext_resource type="Texture2D" uid="uid://bby2nygbcrvnd" path="res://assets/floor-sheet.png" id="1_krm5i"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bc0o4"]
+texture = ExtResource("1_00dfk")
+0:0/0 = 0
+0:1/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6gh5q"]
+texture = ExtResource("1_krm5i")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_jiv0b"]
+physics_layer_0/collision_layer = 2
+terrain_set_0/mode = 0
+sources/2 = SubResource("TileSetAtlasSource_6gh5q")
+sources/0 = SubResource("TileSetAtlasSource_bc0o4")
+
+[node name="Floor" type="TileMapLayer"]
+tile_set = SubResource("TileSet_jiv0b")
