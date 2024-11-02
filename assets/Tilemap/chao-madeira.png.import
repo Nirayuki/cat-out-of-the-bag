@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0xy17laub3a8"
-path="res://.godot/imported/Door 64x64.png-ba76d465c8fb7f20ca1446eb6151d1bb.ctex"
+uid="uid://ypbw81wt4iw3"
+path="res://.godot/imported/chao-madeira.png-8d8903963a951588428cbdb12720db38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Door 64x64.png"
-dest_files=["res://.godot/imported/Door 64x64.png-ba76d465c8fb7f20ca1446eb6151d1bb.ctex"]
+source_file="res://assets/Tilemap/chao-madeira.png"
+dest_files=["res://.godot/imported/chao-madeira.png-8d8903963a951588428cbdb12720db38.ctex"]
 
 [params]
 

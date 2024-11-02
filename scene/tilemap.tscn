@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c40xvcpnbvn3m"]
 
-[ext_resource type="Texture2D" uid="uid://chp3dq7cxhc6i" path="res://assets/door.png" id="1_00dfk"]
+[ext_resource type="Texture2D" uid="uid://bq81eolscav2s" path="res://assets/Tilemap/objects/door.png" id="1_00dfk"]
 [ext_resource type="Texture2D" uid="uid://bby2nygbcrvnd" path="res://assets/floor-sheet.png" id="1_krm5i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bc0o4"]

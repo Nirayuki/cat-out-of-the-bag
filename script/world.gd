@@ -8,4 +8,4 @@ func _ready() -> void:
 		return
 	
 	# Utilizando o Event glogal do Dialog para dar play de forma dinámica
-	DialogEvent.play("test")
+	DialogEvent.play("intro")
