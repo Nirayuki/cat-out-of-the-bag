@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddqnnqcnkdwsl"]
+
+[ext_resource type="Script" path="res://script/inventory.gd" id="1_7j57k"]
+[ext_resource type="Texture2D" uid="uid://do3p6r3ub21ii" path="res://assets/UI/UI_Flat_Frame02a.png" id="2_bmrvg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bs8cq"]
+texture = ExtResource("2_bmrvg")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_6e4oh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ovds"]
+texture = ExtResource("2_bmrvg")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[node name="Inventory" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7j57k")
+
+[node name="PanelBackground" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Description" type="Panel" parent="PanelBackground"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -540.0
+offset_top = 15.0
+offset_right = 530.0
+offset_bottom = 147.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bs8cq")
+
+[node name="Container" type="MarginContainer" parent="PanelBackground/Description"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="PanelBackground/Description/Container"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+label_settings = SubResource("LabelSettings_6e4oh")
+autowrap_mode = 2
+
+[node name="Items" type="Panel" parent="PanelBackground"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.031
+anchor_top = 0.248
+anchor_right = 0.958
+anchor_bottom = 0.966
+offset_left = 0.287998
+offset_top = 0.29599
+offset_right = 0.383911
+offset_bottom = 0.0319824
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3ovds")
+
+[node name="Container" type="MarginContainer" parent="PanelBackground/Items"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ItemsContainer" type="GridContainer" parent="PanelBackground/Items/Container"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 14
+columns = 10

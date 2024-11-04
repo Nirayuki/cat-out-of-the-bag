@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://g6k7ip1pigri"]
+
+[ext_resource type="Script" path="res://script/item.gd" id="1_vkaef"]
+
+[node name="Item" type="Node2D" groups=["Item"]]
+script = ExtResource("1_vkaef")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(11, 10)

@@ -1,0 +1,11 @@
+if {is_item_to_take} == true:
+	You search all over the drawer and suddenly you find a key.
+	Take the key with you?
+	- Take the key
+		You took the key.
+	- Just leave it behind
+		You decide to leave the key behind, seems like you lack of inteligence.
+elif {is_item_to_take} == false:
+	It looks like an old drawer, there's nothing to see here.
+else:
+	I don't think I can use this here.

@@ -1,21 +1,18 @@
-[gd_scene load_steps=24 format=4 uid="uid://cte25ihmfee1"]
+[gd_scene load_steps=21 format=4 uid="uid://ccogj4koh7xv0"]
 
-[ext_resource type="PackedScene" uid="uid://352hogp0qpyk" path="res://scene/player.tscn" id="1_x1uxe"]
-[ext_resource type="Script" path="res://script/world.gd" id="1_y3ptf"]
-[ext_resource type="Texture2D" uid="uid://cpj4sml5m7br2" path="res://assets/Tilemap/pirate-assets.png" id="2_20qnb"]
-[ext_resource type="Texture2D" uid="uid://bby2nygbcrvnd" path="res://assets/floor-sheet.png" id="2_xx6qk"]
-[ext_resource type="Texture2D" uid="uid://ypbw81wt4iw3" path="res://assets/Tilemap/chao-madeira.png" id="4_vdba7"]
-[ext_resource type="PackedScene" uid="uid://04o51an8844j" path="res://scene/area_interaction.tscn" id="5_h46fh"]
-[ext_resource type="Texture2D" uid="uid://2jkyid7vvkxh" path="res://assets/Tilemap/objects/door 32x64.png" id="5_sc36p"]
-[ext_resource type="Texture2D" uid="uid://u3bmdmgvb5y8" path="res://assets/Tilemap/objects/drawner.png" id="6_v6xtc"]
-[ext_resource type="Script" path="res://script/interaction/drawner.gd" id="10_k1toc"]
-[ext_resource type="Script" path="res://script/interaction/door.gd" id="10_xh2w1"]
-[ext_resource type="PackedScene" uid="uid://ccogj4koh7xv0" path="res://scene/world2.tscn" id="10_y0r8w"]
-[ext_resource type="PackedScene" uid="uid://ddqnnqcnkdwsl" path="res://scene/inventory.tscn" id="11_cn5hu"]
-[ext_resource type="PackedScene" uid="uid://dgnkgsrbircru" path="res://scene/gold_key.tscn" id="12_1q4vd"]
+[ext_resource type="Script" path="res://script/world.gd" id="1_ywt41"]
+[ext_resource type="Texture2D" uid="uid://cpj4sml5m7br2" path="res://assets/Tilemap/pirate-assets.png" id="2_0jpcj"]
+[ext_resource type="Texture2D" uid="uid://bby2nygbcrvnd" path="res://assets/floor-sheet.png" id="3_d2c32"]
+[ext_resource type="Texture2D" uid="uid://ypbw81wt4iw3" path="res://assets/Tilemap/chao-madeira.png" id="4_vet6s"]
+[ext_resource type="Texture2D" uid="uid://2jkyid7vvkxh" path="res://assets/Tilemap/objects/door 32x64.png" id="5_ff4u3"]
+[ext_resource type="Texture2D" uid="uid://u3bmdmgvb5y8" path="res://assets/Tilemap/objects/drawner.png" id="6_h4c0r"]
+[ext_resource type="PackedScene" uid="uid://352hogp0qpyk" path="res://scene/player.tscn" id="7_xj13w"]
+[ext_resource type="PackedScene" uid="uid://04o51an8844j" path="res://scene/area_interaction.tscn" id="8_7k0es"]
+[ext_resource type="Script" path="res://script/interaction/door.gd" id="10_dep2x"]
+[ext_resource type="PackedScene" uid="uid://ddqnnqcnkdwsl" path="res://scene/inventory.tscn" id="11_jgfhh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n75r3"]
-texture = ExtResource("2_20qnb")
+texture = ExtResource("2_0jpcj")
 texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 2:1/0 = 0
@@ -117,7 +114,7 @@ tile_size = Vector2i(32, 32)
 sources/2 = SubResource("TileSetAtlasSource_n75r3")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_da0rd"]
-texture = ExtResource("2_xx6qk")
+texture = ExtResource("3_d2c32")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -128,7 +125,7 @@ texture = ExtResource("2_xx6qk")
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w4r2l"]
-texture = ExtResource("4_vdba7")
+texture = ExtResource("4_vet6s")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -142,7 +139,7 @@ sources/0 = SubResource("TileSetAtlasSource_da0rd")
 sources/1 = SubResource("TileSetAtlasSource_w4r2l")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybrjy"]
-texture = ExtResource("5_sc36p")
+texture = ExtResource("5_ff4u3")
 0:1/0 = 0
 1:1/0 = 0
 0:2/0 = 0
@@ -151,7 +148,7 @@ texture = ExtResource("5_sc36p")
 1:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_weegm"]
-texture = ExtResource("6_v6xtc")
+texture = ExtResource("6_h4c0r")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
@@ -169,7 +166,7 @@ size = Vector2(24, 39)
 size = Vector2(26, 23)
 
 [node name="World" type="Node2D"]
-script = ExtResource("1_y3ptf")
+script = ExtResource("1_ywt41")
 
 [node name="Tilemap" type="Node2D" parent="."]
 
@@ -182,10 +179,10 @@ tile_map_data = PackedByteArray("AAABAAkAAQABAAAAAAACAAkAAQAAAAAAAAADAAkAAQABAAA
 tile_set = SubResource("TileSet_n7h6e")
 
 [node name="Objects" type="TileMapLayer" parent="Tilemap"]
-tile_map_data = PackedByteArray("AAACAAgAAQAAAAMAAAACAAcAAQAAAAIAAAADAAcAAQABAAIAAAADAAgAAQABAAMAAAACAAYAAQAAAAEAAAADAAYAAQABAAEAAAAGAAYAAQABAAEAAAAGAAcAAQABAAIAAAAGAAgAAQABAAMAAAAFAAYAAQAAAAEAAAAFAAcAAQAAAAIAAAAFAAgAAQAAAAMAAAAJAAYAAQABAAEAAAAJAAcAAQABAAIAAAAJAAgAAQABAAMAAAAIAAYAAQAAAAEAAAAIAAcAAQAAAAIAAAAIAAgAAQAAAAMAAAALAAYAAQAAAAEAAAALAAcAAQAAAAIAAAALAAgAAQAAAAMAAAAMAAYAAQABAAEAAAAMAAcAAQABAAIAAAAMAAgAAQABAAMAAAAQAAcAAgAAAAAAAAAQAAgAAgAAAAEAAAARAAcAAgABAAAAAAARAAgAAgABAAEAAAA=")
+tile_map_data = PackedByteArray("AAAQAAcAAgAAAAAAAAAQAAgAAgAAAAEAAAARAAcAAgABAAAAAAARAAgAAgABAAEAAAAFAAYAAQAAAAEAAAAFAAcAAQAAAAIAAAAFAAgAAQAAAAMAAAAGAAYAAQABAAEAAAAGAAcAAQABAAIAAAAGAAgAAQABAAMAAAA=")
 tile_set = SubResource("TileSet_gv31k")
 
-[node name="Player" parent="." instance=ExtResource("1_x1uxe")]
+[node name="Player" parent="." instance=ExtResource("7_xj13w")]
 position = Vector2(243, 127)
 
 [node name="RemoteCamera" type="RemoteTransform2D" parent="Player"]
@@ -202,17 +199,15 @@ editor_draw_limits = true
 
 [node name="Interaction_areas" type="Node2D" parent="."]
 
-[node name="Door" parent="Interaction_areas" node_paths=PackedStringArray("ActionScript") instance=ExtResource("5_h46fh")]
+[node name="Door" parent="Interaction_areas" instance=ExtResource("8_7k0es")]
 position = Vector2(111, 129)
-ActionScript = NodePath("../../Interaction_scripts/door")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_areas/Door"]
 position = Vector2(-14, -4)
 shape = SubResource("RectangleShape2D_qyk3u")
 
-[node name="Drawner" parent="Interaction_areas" node_paths=PackedStringArray("ActionScript") instance=ExtResource("5_h46fh")]
+[node name="Drawner" parent="Interaction_areas" instance=ExtResource("8_7k0es")]
 position = Vector2(271, 131)
-ActionScript = NodePath("../../Interaction_scripts/drawner")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_areas/Drawner"]
 position = Vector2(1, 1.5)
@@ -221,21 +216,9 @@ shape = SubResource("RectangleShape2D_4b4t2")
 [node name="Interaction_scripts" type="Node2D" parent="."]
 
 [node name="door" type="Node2D" parent="Interaction_scripts"]
-script = ExtResource("10_xh2w1")
-DialogPath = "door"
-ItemName = "Gold Key"
-Action = "default"
-NextScene = ExtResource("10_y0r8w")
-
-[node name="drawner" type="Node2D" parent="Interaction_scripts"]
-script = ExtResource("10_k1toc")
-DialogPath = "drawner"
-ItemPackedScene = ExtResource("12_1q4vd")
-ItemPath = "key-gold"
-ItemName = "Gold Key"
-Action = "take_item"
+script = ExtResource("10_dep2x")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Inventory" parent="CanvasLayer" instance=ExtResource("11_cn5hu")]
+[node name="Inventory" parent="CanvasLayer" instance=ExtResource("11_jgfhh")]
 unique_name_in_owner = true

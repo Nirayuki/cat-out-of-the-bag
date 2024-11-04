@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://thvff68dty1p"]
+
+[ext_resource type="Script" path="res://script/inventary_slot.gd" id="1_4vcbc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k1dbx"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gx8t1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2768l"]
+
+[node name="Inventory_slot" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("1_4vcbc")
+
+[node name="Button" type="TextureButton" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = SubResource("CompressedTexture2D_k1dbx")
+texture_pressed = SubResource("CompressedTexture2D_gx8t1")
+texture_focused = SubResource("CompressedTexture2D_2768l")
+stretch_mode = 5
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

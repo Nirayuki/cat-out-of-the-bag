@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgnkgsrbircru"]
+
+[ext_resource type="Script" path="res://script/item.gd" id="1_2hokd"]
+[ext_resource type="Texture2D" uid="uid://d3r4sga63agr8" path="res://assets/Items/key-gold.png" id="2_cgpso"]
+
+[node name="GoldKey" type="Node2D"]
+script = ExtResource("1_2hokd")
+Sprite_Image = ExtResource("2_cgpso")
+TexturePath = "key-gold"
+Name = "Gold Key"
+Description = "A finely crafted key forged from pure gold, glinting with an otherworldly glow. Legends say it can unlock doors to hidden realms or treasure chambers long forgotten. A true relic of rare and mysterious power."
