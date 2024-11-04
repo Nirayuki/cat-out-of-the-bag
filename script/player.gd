@@ -6,7 +6,7 @@ const JUMP_VELOCITY: float = -400.0
 var dialogPath: String
 
 # ONREADY VARS
-@onready var sprite: AnimatedSprite2D = %Sprite
+@onready var sprite: AnimationPlayer = %Animation
 @onready var label_action: Label = %Label_action
 
 # EXPORT VARS
@@ -23,9 +23,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 		sprite.play("walk")
 		if velocity.x < 0:
-			sprite.flip_h = false
+			%Sprite2D.flip_h = false
 		else:
-			sprite.flip_h = true
+			%Sprite2D.flip_h = true
 	else:
 		sprite.play("idle")
 		velocity.x = move_toward(velocity.x, 0, SPEED)

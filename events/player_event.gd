@@ -27,6 +27,7 @@ func selectItem(item: Item, index: int):
 	is_using_item = true
 
 func descelectItem():
+	selectedItem = null
 	Dialogic.VAR.is_using_item = false
 	is_using_item = false
 	selectedItemIndex = 999

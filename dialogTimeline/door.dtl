@@ -3,8 +3,6 @@ if {is_using_item} == true and {is_right_item} == true:
 	- Use {item_name}.
 		You use the key on the door and it opened.
 	- Forget it.
-elif {is_using_item} == true and {is_right_item} == false:
-	I don't think it will work in here.
 else:
 	player: I can't open this door, seems like it's looked.
 	player: Maybe the dog could help me out.

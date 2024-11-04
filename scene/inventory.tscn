@@ -1,23 +1,25 @@
 [gd_scene load_steps=6 format=3 uid="uid://ddqnnqcnkdwsl"]
 
 [ext_resource type="Script" path="res://script/inventory.gd" id="1_7j57k"]
-[ext_resource type="Texture2D" uid="uid://do3p6r3ub21ii" path="res://assets/UI/UI_Flat_Frame02a.png" id="2_bmrvg"]
+[ext_resource type="Texture2D" uid="uid://bagxbj7oraoq1" path="res://assets/UI/SpriteSheetUI.png" id="2_p78y1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bs8cq"]
-texture = ExtResource("2_bmrvg")
-texture_margin_left = 4.0
-texture_margin_top = 4.0
-texture_margin_right = 4.0
-texture_margin_bottom = 4.0
+texture = ExtResource("2_p78y1")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(152, 8, 32, 32)
 
 [sub_resource type="LabelSettings" id="LabelSettings_6e4oh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ovds"]
-texture = ExtResource("2_bmrvg")
-texture_margin_left = 4.0
-texture_margin_top = 4.0
-texture_margin_right = 4.0
-texture_margin_bottom = 4.0
+texture = ExtResource("2_p78y1")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(152, 8, 32, 32)
 
 [node name="Inventory" type="Control"]
 process_mode = 3
@@ -60,7 +62,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
@@ -71,6 +73,14 @@ layout_mode = 2
 size_flags_vertical = 1
 label_settings = SubResource("LabelSettings_6e4oh")
 autowrap_mode = 2
+
+[node name="Label" type="Label" parent="PanelBackground/Description"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 8.0
+offset_right = 98.0
+offset_bottom = 31.0
+text = "Descrição"
 
 [node name="Items" type="Panel" parent="PanelBackground"]
 unique_name_in_owner = true
@@ -96,7 +106,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
@@ -106,3 +116,11 @@ layout_mode = 2
 theme_override_constants/h_separation = 12
 theme_override_constants/v_separation = 14
 columns = 10
+
+[node name="Label" type="Label" parent="PanelBackground/Items"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 11.0
+offset_right = 103.0
+offset_bottom = 34.0
+text = "Inventário"
